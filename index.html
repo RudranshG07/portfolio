@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffff00">
     <title>Rudransh Garewal - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -693,46 +697,274 @@
             margin: 25px 0;
         }
 
-        /* Responsive Design */
+        /* Enhanced Responsive Design */
+        
+        /* Mobile Devices (320px - 768px) */
         @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            
+            .top-navbar {
+                height: 50px;
+                padding: 0 15px;
+                flex-direction: column;
+                gap: 5px;
+                justify-content: center;
+            }
+            
+            .navbar-left .logo {
+                font-size: 16px;
+            }
+            
+            .navbar-right {
+                font-size: 11px;
+                gap: 10px;
+            }
+            
             .desktop {
-                padding: 20px;
-                gap: 25px;
+                top: 50px;
+                padding: 15px;
+                gap: 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                justify-items: center;
             }
             
             .folder {
-                width: 150px;
-                height: 190px;
+                width: 100px;
+                height: 120px;
+                margin-bottom: 10px;
             }
             
             .folder-container {
-                height: 150px;
-            }
-            
-            .folder-icon {
                 width: 60px;
-                height: 60px;
+                height: 45px;
             }
             
-            .folder-icon svg {
-                width: 30px;
-                height: 30px;
+            .folder-container::after {
+                width: 25px;
+                height: 10px;
+                left: 6px;
+                top: -6px;
+            }
+            
+            .folder-label {
+                font-size: 12px;
+                padding: 6px 12px;
+                margin-top: 10px;
             }
             
             .window {
                 min-width: 95% !important;
-                min-height: 80% !important;
-                top: 10% !important;
+                min-height: 85% !important;
+                top: 50px !important;
                 left: 2.5% !important;
+                border-radius: 15px;
+            }
+            
+            .window-header {
+                height: 50px;
+                padding: 0 15px;
+            }
+            
+            .window-controls {
+                gap: 8px;
+                margin-right: 15px;
+            }
+            
+            .window-control {
+                width: 12px;
+                height: 12px;
+            }
+            
+            .window-title {
+                font-size: 14px;
             }
             
             .window-content {
-                padding: 20px;
+                padding: 15px;
+                height: calc(100% - 50px);
+            }
+            
+            .window-content h1 {
+                font-size: 24px;
+                line-height: 1.2;
+            }
+            
+            .window-content h2 {
+                font-size: 20px;
+                margin-bottom: 15px;
+                line-height: 1.3;
+            }
+            
+            .window-content h3 {
+                font-size: 18px;
+                margin: 20px 0 15px 0;
+            }
+            
+            .window-content h4 {
+                font-size: 16px;
+                margin: 15px 0 10px 0;
+            }
+            
+            .window-content p {
+                font-size: 14px;
+                line-height: 1.6;
+                margin-bottom: 12px;
             }
             
             .tech-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .tech-item {
+                padding: 15px;
+                text-align: left;
+            }
+            
+            .project-card, .contact-card {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .contact-card {
+                flex-direction: column;
+                text-align: center;
                 gap: 15px;
+            }
+            
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+            }
+            
+            /* Mobile button styling */
+            div[style*="display: flex"] a {
+                padding: 10px 15px !important;
+                font-size: 13px !important;
+                margin: 5px !important;
+            }
+            
+            .mesh-box {
+                width: 20px !important;
+                height: 20px !important;
+            }
+            
+            #meshContainer {
+                pointer-events: none;
+            }
+        }
+        
+        /* Tablet Devices (769px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .desktop {
+                padding: 30px;
+                gap: 30px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                justify-items: center;
+            }
+            
+            .folder {
+                width: 110px;
+                height: 130px;
+            }
+            
+            .folder-container {
+                width: 70px;
+                height: 50px;
+            }
+            
+            .window {
+                min-width: 85% !important;
+                min-height: 80% !important;
+                top: 8% !important;
+                left: 7.5% !important;
+            }
+            
+            .window-content {
+                padding: 25px;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 18px;
+            }
+        }
+        
+        /* Large Desktop (1025px - 1440px) */
+        @media (min-width: 1025px) and (max-width: 1440px) {
+            .desktop {
+                padding: 35px;
+                gap: 35px;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+        }
+        
+        /* Extra Large Screens (1441px+) */
+        @media (min-width: 1441px) {
+            .desktop {
+                padding: 50px;
+                gap: 50px;
+            }
+            
+            .folder {
+                width: 140px;
+                height: 160px;
+            }
+            
+            .folder-container {
+                width: 90px;
+                height: 70px;
+            }
+            
+            .window {
+                min-width: 900px;
+                min-height: 700px;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .folder:hover {
+                transform: none;
+            }
+            
+            .folder:active {
+                transform: translateY(-4px) scale(1.02);
+            }
+            
+            .tech-item:hover {
+                transform: none;
+            }
+            
+            .project-card:hover {
+                transform: none;
+            }
+            
+            .contact-card:hover {
+                transform: none;
+            }
+            
+            /* Disable mesh hover on touch devices */
+            .mesh-box:hover {
+                background: transparent !important;
+                transform: none !important;
+                box-shadow: none !important;
+            }
+            
+            .window-control {
+                min-width: 24px;
+                min-height: 24px;
             }
         }
     </style>
@@ -1566,6 +1798,50 @@
                 openWindow('home');
             }
         }, 1000);
+        
+        // Touch Device Detection and Optimization
+        function isTouchDevice() {
+            return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        }
+        
+        // Disable mesh on touch devices for performance
+        if (isTouchDevice()) {
+            const meshContainer = document.getElementById('meshContainer');
+            if (meshContainer) {
+                meshContainer.style.display = 'none';
+            }
+        }
+        
+        // Prevent zoom on double-tap for iOS
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        
+        // Handle orientation changes
+        window.addEventListener('orientationchange', function() {
+            setTimeout(function() {
+                // Refresh mesh on orientation change (only for non-touch devices)
+                if (!isTouchDevice() && document.getElementById('meshContainer')) {
+                    createInteractiveMesh();
+                }
+                
+                // Adjust window sizes for current orientation
+                const activeWindows = document.querySelectorAll('.window.active');
+                activeWindows.forEach(win => {
+                    if (window.innerWidth <= 768) {
+                        win.style.width = '95%';
+                        win.style.height = '85%';
+                        win.style.top = '50px';
+                        win.style.left = '2.5%';
+                    }
+                });
+            }, 100);
+        });
     </script>
 </body>
 </html>
